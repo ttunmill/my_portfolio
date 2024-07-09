@@ -1,0 +1,108 @@
+/* ============ 공통 */
+.wave1,
+.wave2 {
+    overflow: hidden;
+    word-spacing: 2px;
+    line-height: 1.3;
+}
+.letter {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+/* ============ sec01 */
+.sec01 {
+    position: relative;
+    background: linear-gradient(360deg, #3a3a3a, #000);
+    background-image: url("../images/sec01_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.sec01 .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+}
+.sec01 .text .wave_tit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 4rem;
+}
+.sec01 .text p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+    animation: opacity 0.3s 1.5s linear both;
+}
+.sec01 .text p em {font-weight: 700;}
+.sec01 .scroll_down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.sec01 .scroll_down span {
+    font-weight: 300;
+    color: #fff;
+}
+.sec01 .scroll_down img {
+    width: 100%;
+    max-width: 25px;
+    filter: invert(1);
+    animation: bouns 1s ease-in infinite alternate;
+}
+/* ============ sec02 */
+.sec02 {
+    padding: 100px 0;
+}
+.sec02 h2 {
+    margin-bottom: 100px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec02 .prof_contents {
+    display: flex;
+}
+.sec02 .prof_contents .left_prof {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.sec02 .prof_contents .left_prof .image {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: #ddd;
+}
+.sec02 .prof_contents .left_prof .image img {width: 100%;}
+.sec02 .prof_contents .left_prof p {font-size: 1.125rem;}
+.sec02 .prof_contents .left_prof p span {
+    color: #777;
+}
+
+/* ============ animation */
+@keyframes reveal {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0);}
+}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes bouns {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(10px);}
+}
