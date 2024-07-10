@@ -10,16 +10,16 @@
     <script src="./js/index.js" defer></script>
 </head>
 <body>
+    <div class="scroll_gauge"></div>
     <div class="nav">
         <div class="nav_wrap">
             <h1><a href="./index.html"><img src="./images/favicon.jpg" alt=""></a></h1>
             <div class="menu">
-                <a href="#">top</a>
-                <a href="#">mid</a>
-                <a href="#">btm</a>
+                <a href="#sec02">profile</a>
+                <a href="#sec03">project</a>
+                <a href="#sec04">design</a>
             </div>
         </div>
-        <div class="scroll_gauge"></div>
     </div>
     <main>
         <div class="sec01">
@@ -32,15 +32,15 @@
                         PORTFOLIO
                     </div>
                 </div>
-                <p>안녕하세요! 꾸준히 노력하는 웹 퍼블리셔 <em>조현우</em> 입니다.</p>
+                <p>꾸준히 노력하는 웹 퍼블리셔 <em>조현우</em> 입니다</p>
             </h2>
             <div class="scroll_down">
                 <span>scroll down</span>
                 <img src="./images/bottom_arrow.png" alt="scroll down">
             </div>
         </div>
-        <div class="sec02">
-            <h2>My Profile</h2>
+        <div id="sec02" class="sec02">
+            <!-- <h2>About Me</h2> -->
             <div class="prof_contents">
                 <div class="left_prof">
                     <div class="image"><img src="./images/favicon.jpg" alt=""></div>
@@ -50,25 +50,164 @@
                     <p>ttunmill@gmail.com</p>
                 </div>
                 <div class="right_prof">
-                    <div>
-                        <div>
+                    <div class="right_top">
+                        <div class="right_top_g">
                             <h3>EDUCATION</h3>
                             <dl>
                                 <dt>2024.03 ~ 2024.08</dt>
                                 <dd>그린컴퓨터아카데미 UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료</dd>
+                                <dt>2021.12 ~ 2022.06</dt>
+                                <dd>일본 웹프로그램개발전문가 연수과정 36기</dd>
                             </dl>
                         </div>
-                        <div>
+                        <div class="right_top_g">
                             <h3>CAREER</h3>
                             <dl>
                                 <dt>2022.07 ~ 2023.09</dt>
                                 <dd>트랜스코스모스코리아 / 웹퍼블리셔 / 정직원</dd>
                             </dl>
                         </div>
+                        <div class="right_top_g">
+                            <h3>LICENSE</h3>
+                            <dl>
+                                <dt>2022.04</dt>
+                                <dd>정보처리 산업기사(필기)</dd>
+                                <dt>2021.06</dt>
+                                <dd>컴퓨터활용능력 2급</dd>
+                                <dt>2022.02</dt>
+                                <dd>운전면허 1종 보통</dd>
+                                <dt>2017.06</dt>
+                                <dd>정보기술자격(ITQ)</dd>
+                            </dl>
+                        </div>
                     </div>
-                    
+                    <ul class="rgiht_bottom">
+                        <li>
+                            <h3>SKILL</h3>
+                            <div class="images">
+                                <img src="./images/html.png" alt="HTML">
+                                <img src="./images/css.png" alt="HTML">
+                                <img src="./images/javascript.png" alt="HTML">
+                                <img src="./images/jquery.png" alt="HTML">
+                                <img src="./images/sass.png" alt="HTML">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>TOOL</h3>
+                            <div class="images">
+                                <img src="./images/visual_studio_code.png" alt="visual studio code">
+                                <img src="./images/git.png" alt="git">
+                                <img src="./images/gitHub.png" alt="gitHub">
+                                <img src="./images/figma.png" alt="figma">
+                                <img src="./images/photoshop.png" alt="photoshop">
+                                <img src="./images/ftp.png" alt="FTP">
+                                <img src="./images/slack.png" alt="slack">
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
+        <div id="sec03" class="sec03">
+            <!-- <h2>Project</h2> -->
+            <ul class="project_list">
+                <li>
+                    <h3>
+                        <span>project #1</span>
+                        <strong>사운드 웨이브</strong>
+                        <span>오디오 기기</span>
+                    </h3>
+                    <div class="project_left">
+                        <div class="image"><img src="./images/sound_wave.png" alt=""></div>
+                    </div>
+                    <div class="project_right">
+                        <dl>
+                            <dt>사이트</dt>
+                            <dd>적응형</dd>
+                            <dt>제작기간</dt>
+                            <dd>7일 (개인 100%)</dd>
+                            <dt>PAGE</dt>
+                            <dd class="detail_page">
+                                <strong>Main + Sub*4</strong>
+                                <span>로그인, 회원가입, NEW, 상품 상세 페이지</span>
+                            </dd>
+                            <dt>TOOL</dt>
+                            <dd>HTML, CSS, JavaScript, Jquery, php, photoshop</dd>
+                        </dl>
+                        <div class="btn_list">
+                            <!-- <a href="#" target="_blank" class="link_btn">Figma</a> -->
+                            <a href="#" target="_blank" class="link_btn">기획서</a>
+                            <a href="https://github.com/ttunmill/sound_wave" target="_blank" class="link_btn">Git</a>
+                            <a href="http://ttunmill.dothome.co.kr/sound_wave/index.html" target="_blank" class="link_btn">사이트</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        <span>project #2</span>
+                        <strong>가비아커머스</strong>
+                        <span>전자상거래</span>
+                    </h3>
+                    <div class="project_left">
+                        <div class="image"><img src="./images/gabiacns.png" alt=""></div>
+                    </div>
+                    <div class="project_right">
+                        <dl>
+                            <dt>사이트</dt>
+                            <dd>반응형</dd>
+                            <dt>제작기간</dt>
+                            <dd>5일 (개인 100%)</dd>
+                            <dt>PAGE</dt>
+                            <dd class="detail_page">
+                                <strong>Main + Sub*7</strong>
+                                <span>로그인, 회원가입, 쇼핑몰창업, AI에디터, 제작·운영 의뢰, 오픈마켓 판매, 해외 진출</span>
+                            </dd>
+                            <dt>TOOL</dt>
+                            <dd>HTML, CSS, JavaScript, Jquery, php, figma, photoshop</dd>
+                        </dl>
+                        <div class="btn_list">
+                            <a href="https://www.figma.com/design/KcCow2JyU1MwBAFFUT0hUr/%EC%99%80%EC%9D%B4%EC%96%B4-%ED%94%84%EB%A0%88%EC%9E%84---%EA%B0%80%EB%B9%84%EC%95%84%EC%BB%A4%EB%A8%B8%EC%8A%A4?node-id=0-1&t=EuOyoFplopNlZlH9-1" target="_blank" class="link_btn">Figma</a>
+                            <a href="#" target="_blank" class="link_btn">기획서</a>
+                            <a href="https://github.com/ttunmill/gabiacns" target="_blank" class="link_btn">Git</a>
+                            <a href="http://ttunmill.dothome.co.kr/gabiacns/index.html" target="_blank" class="link_btn">사이트</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        <span>project #3</span>
+                        <strong>로지텍</strong>
+                        <span>주변기기</span>
+                    </h3>
+                    <div class="project_left">
+                        <div class="image"><img src="./images/logitech.png" alt=""></div>
+                    </div>
+                    <div class="project_right">
+                        <dl>
+                            <dt>사이트</dt>
+                            <dd>반응형</dd>
+                            <dt>제작기간</dt>
+                            <dd>5일 (개인 100%)</dd>
+                            <dt>PAGE</dt>
+                            <dd class="detail_page">
+                                <strong>Main + Sub*7</strong>
+                                <span>로그인, 회원가입, 쇼핑몰창업, AI에디터, 제작·운영 의뢰, 오픈마켓 판매, 해외 진출</span>
+                            </dd>
+                            <dt>TOOL</dt>
+                            <dd>HTML, CSS, JavaScript, Jquery, php, figma, photoshop</dd>
+                        </dl>
+                        <div class="btn_list">
+                            <a href="https://www.figma.com/design/TQ2dZRQrYzf7MjAp0DiGr9/logitech-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&t=dCjMtVrbruDb2aVB-1" target="_blank" class="link_btn">Figma</a>
+                            <a href="#" target="_blank" class="link_btn">기획서</a>
+                            <a href="https://github.com/ttunmill/logitech?tab=readme-ov-file" target="_blank" class="link_btn">Git</a>
+                            <a href="http://ttunmill.dothome.co.kr/logitech/index.html" target="_blank" class="link_btn">사이트</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="sec04" class="sec04">
+            <h2>Design</h2>
         </div>
     </main>
 </body>

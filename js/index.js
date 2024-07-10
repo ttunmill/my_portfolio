@@ -38,3 +38,27 @@ window.addEventListener('scroll', function() {
   gaugeBar.style.width = (fillRatio * 100) + '%';
 
 });
+
+// 네비게이션 바
+const nav = document.querySelector(".nav")
+const nav_menu = document.querySelectorAll(".menu a")
+
+window.addEventListener("scroll", () => {
+    if(this.window.pageYOffset >= 700) {
+        nav.style.position = "fixed"
+        nav.style.backgroundColor = "#fff"
+        nav.style.boxShadow = "5px -10px 20px rgba(0, 0, 0, 0.8)"
+        for(var i of nav_menu) {
+          i.style.color = "#000"
+          i.classList.add("on")
+        }
+    } else {
+        nav.style.position = "absolute"
+        nav.style.backgroundColor = "unset"
+        nav.style.boxShadow = "unset"
+        for(var i of nav_menu) {
+          i.style.color = "#fff"
+          i.classList.remove("on")
+        }
+    }
+})
