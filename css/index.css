@@ -11,7 +11,7 @@ body::-webkit-scrollbar {display: none;}
 }
 .wave1 span,
 .wave2 span {
-    font-family: "Caveat Brush", cursive;
+    font-family: "Rubik", sans-serif;
 }
 .letter {
     display: inline-block;
@@ -69,12 +69,12 @@ div[class ^= sec]:not(.sec01) h2 {
     content: "";
     position: absolute;
     bottom: 0;
+    width: 100%;
+    height: 0px;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     border-bottom: solid 2px #fff;
-    width: 100%;
-    height: 0px;
 }
 .nav .nav_wrap .menu a:hover::before {
     transform-origin: bottom left;
@@ -113,7 +113,7 @@ div[class ^= sec]:not(.sec01) h2 {
     flex-direction: column;
     margin-bottom: 50px;
     text-align: center;
-    font-size: 6rem;
+    font-size: 4rem;
 }
 .sec01 .text p {
     text-align: center;
@@ -190,19 +190,18 @@ div[class ^= sec]:not(.sec01) h2 {
 }
 .sec02 .prof_contents .right_prof .right_top .right_top_g h3 {
     margin-bottom: 10px;
-    font-size: 1.875rem;
     font-weight: 500;
-    font-family: "Caveat Brush", cursive;
     color: #FFD24C;
-    
 }
 .sec02 .prof_contents .right_prof .right_top .right_top_g h3, 
 .sec02 .prof_contents .right_prof .rgiht_bottom li h3 {
     position: relative;
     z-index: 20;
     width: fit-content;
+    font-size: 1.25rem;
+    font-family: "Rubik", sans-serif;
 }
-.sec02 .prof_contents .right_prof .right_top .right_top_g h3::before, 
+/* .sec02 .prof_contents .right_prof .right_top .right_top_g h3::before, 
 .sec02 .prof_contents .right_prof .rgiht_bottom li h3::before {
     content: "";
     display: block;
@@ -215,16 +214,26 @@ div[class ^= sec]:not(.sec01) h2 {
     background-color: #222;
     z-index: -1;
     padding: 5px 10px;
+} */
+.sec02 .prof_contents .right_prof .right_top .right_top_g:nth-child(3) ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 1rem; */
 }
-.sec02 .prof_contents .right_prof .right_top .right_top_g dl {}
-.sec02 .prof_contents .right_prof .right_top .right_top_g dt {
+.sec02 .prof_contents .right_prof .right_top .right_top_g:nth-child(3) ul li {
+    width: calc(100% / 2 - 1rem);
+}
+.sec02 .prof_contents .right_prof .right_top .right_top_g .date {
     margin-bottom: 5px;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5;
     color: #444;
 }
-.sec02 .prof_contents .right_prof .right_top .right_top_g dd {
+.sec02 .prof_contents .right_prof .right_top .right_top_g .tit {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
     font-size: 0.875rem;
     line-height: 1.3;
@@ -235,9 +244,7 @@ div[class ^= sec]:not(.sec01) h2 {
 .sec02 .prof_contents .right_prof .rgiht_bottom li:last-child {margin: 0;}
 .sec02 .prof_contents .right_prof .rgiht_bottom li h3 {
     margin-bottom: 10px;
-    font-size: 1.875rem;
     font-weight: 500;
-    font-family: "Caveat Brush", cursive;
     color: #FFD24C;
 }
 .sec02 .prof_contents .right_prof .rgiht_bottom li .images {
@@ -275,7 +282,7 @@ div[class ^= sec]:not(.sec01) h2 {
 }
 .sec03 .project_list li h3 span:first-of-type {
     text-transform: uppercase;
-    font-family: "Caveat Brush", cursive;
+    font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
     color: #FFD24C;
 }
@@ -295,7 +302,8 @@ div[class ^= sec]:not(.sec01) h2 {
 .sec03 .project_list li:nth-child(2) .project_left {background-color: #3399FF;}
 .sec03 .project_list li:nth-child(3) .project_left {background-color: #231F20;}
 .sec03 .project_list li .project_left .image {
-    width: 600px;
+    max-width: 600px;
+    width: 80%;
     margin: 0 auto;
 }
 .sec03 .project_list li .project_left .image img {width: 100%;}
@@ -347,8 +355,65 @@ div[class ^= sec]:not(.sec01) h2 {
     border-radius: 30px;
     transition: all 0.3s;
 }
-.sec03 .project_list li .project_right .btn_list .link_btn:hover {
-    opacity: 0.8;
+.sec03 .project_list li .project_right .btn_list .link_btn:hover {opacity: 0.7;}
+.sec03 .project_list li .contents_img {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.sec03 .project_list li .contents_img p {
+    width: 400px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.sec03 .project_list li .contents_img p img {
+    width: 100%;
+    display: block;
+    background-color: #d9d9d9;
+}
+/* ============ sec04 */
+.sec04 {background-color: #000;}
+.sec04 * {color: #fff;}
+.sec04 .txt {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sec04 .txt p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.sec04 .txt p:last-child {margin: 0;}
+.sec04 .txt p > *:not(a) {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.sec04 .txt p a {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+.sec04 .txt p a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    border-bottom: solid 1px #fff;
+}
+.sec04 .txt p a:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 /* ============ animation */
 @keyframes reveal {
@@ -376,4 +441,48 @@ div[class ^= sec]:not(.sec01) h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* ============ 반응형 */
+@media screen and (max-width: 1200px) {
+    /* ============ sec02 */
+    
+}
+@media screen and (max-width: 1012px) {
+    /* ============ sec02 */
+    .sec02 .prof_contents {
+        flex-direction: column;
+    }
+    .sec02 .prof_contents .left_prof {
+        padding: 0 0 2rem 0;
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .sec02 .prof_contents .right_prof .right_top {
+        /* flex-direction: column; */
+    }
+    .sec02 .prof_contents .right_prof .right_top .right_top_g:nth-child(3) {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 620px) {
+    .sec03 .project_list li .project_right {
+        flex-direction: column;
+    }
+    .sec03 .project_list li .project_right dl {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .sec02 .prof_contents .right_prof .rgiht_bottom li .images {gap: 1rem;}
+    .sec02 .prof_contents .right_prof .rgiht_bottom li .images img {
+        max-width: 40px;
+    }
+    .sec02 .prof_contents .right_prof .right_top .right_top_g {width: 100%;}
+    .sec02 .prof_contents .right_prof .right_top {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 352px) {
+    .sec02 .prof_contents .right_prof .right_top .right_top_g:nth-child(3) ul {flex-direction: column;}
+    .sec02 .prof_contents .right_prof .right_top .right_top_g:nth-child(3) ul li {width: 100%;}
 }
