@@ -42,6 +42,8 @@ window.addEventListener('scroll', function() {
 // 네비게이션 바
 const nav = document.querySelector(".nav")
 const nav_menu = document.querySelectorAll(".menu a")
+const m_menu = document.querySelector(".m-menu")
+console.log(m_menu.children)
 
 window.addEventListener("scroll", () => {
     if(this.window.pageYOffset >= 700) {
@@ -52,6 +54,7 @@ window.addEventListener("scroll", () => {
           i.style.color = "#000"
           i.classList.add("on")
         }
+        for(var i of m_menu.children) {i.style.backgroundColor = "#000"}
     } else {
         nav.style.position = "absolute"
         nav.style.backgroundColor = "unset"
@@ -60,5 +63,12 @@ window.addEventListener("scroll", () => {
           i.style.color = "#fff"
           i.classList.remove("on")
         }
+        for(var i of m_menu.children) {i.style.backgroundColor = "#ecf0f1"}
     }
 })
+
+$(document).ready(function(){
+  $(".m-menu").click(function(){
+    $(this).toggleClass("is-active");
+  });
+});

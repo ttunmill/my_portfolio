@@ -89,7 +89,39 @@ div[class ^= sec]:not(.sec01) h2 {
     width: 30px;
 }
 .nav h1 a img {width: 100%;}
+/* 네비게이션 애니메이션 */
+.m-menu {
+    display: none;
+    padding-right: 16px;
+    cursor: pointer;
+}
+.line {
+	width: 50px;
+	height: 5px;
+	background-color: #ecf0f1;
+	display: block;
+	margin: 8px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.m-menu.is-active .line:nth-child(2) {
+	opacity: 0;
+}
 
+.m-menu.is-active .line:nth-child(1) {
+	-webkit-transform: translateY(13px) rotate(45deg);
+	-ms-transform: translateY(13px) rotate(45deg);
+	-o-transform: translateY(13px) rotate(45deg);
+	transform: translateY(13px) rotate(45deg);
+}
+
+.m-menu.is-active .line:nth-child(3) {
+	-webkit-transform: translateY(-13px) rotate(-45deg);
+	-ms-transform: translateY(-13px) rotate(-45deg);
+	-o-transform: translateY(-13px) rotate(-45deg);
+	transform: translateY(-13px) rotate(-45deg);
+}
 /* ============ sec01 */
 .sec01 {
     position: relative;
@@ -448,6 +480,9 @@ div[class ^= sec]:not(.sec01) h2 {
     
 }
 @media screen and (max-width: 1012px) {
+    /* navigation */
+    .nav .nav_wrap .menu {display: none;}
+    .m-menu {display: block;}
     /* ============ sec02 */
     .sec02 .prof_contents {
         flex-direction: column;
