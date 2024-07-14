@@ -78,6 +78,7 @@ $(document).ready(function(){
 // 네비게이션 클론
 const menu = document.querySelector(".menu")
 const nav_clone = menu.cloneNode(true)
+const nav_clone_a = document.querySelectorAll(".nav .nav_wrap .m_mobile .menu a")
 m_mobile.append(nav_clone)
 
 m_menu.addEventListener("click", () => {
@@ -98,3 +99,10 @@ window.onresize = function(event){
     m_mobile.style.display = "block"
   }
 }
+console.log(nav_clone_a)
+nav_clone_a.forEach(i, () => {
+    i.addEventListener("click", () => {
+      m_mobile.style.opacity = 0;
+      m_mobile.style.visibility = "hidden";
+    })
+})
