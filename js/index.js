@@ -43,7 +43,7 @@ window.addEventListener('scroll', function() {
 const nav = document.querySelector(".nav")
 const nav_menu = document.querySelectorAll(".menu a")
 const m_menu = document.querySelector(".m-menu")
-console.log(m_menu.children)
+const m_mobile = document.querySelector(".m_mobile")
 
 window.addEventListener("scroll", () => {
     if(this.window.pageYOffset >= 700) {
@@ -55,6 +55,7 @@ window.addEventListener("scroll", () => {
           i.classList.add("on")
         }
         for(var i of m_menu.children) {i.style.backgroundColor = "#000"}
+        m_mobile.style.top = "60px"
     } else {
         nav.style.position = "absolute"
         nav.style.backgroundColor = "unset"
@@ -64,6 +65,7 @@ window.addEventListener("scroll", () => {
           i.classList.remove("on")
         }
         for(var i of m_menu.children) {i.style.backgroundColor = "#ecf0f1"}
+        m_mobile.style.top = 0
     }
 })
 
@@ -72,3 +74,27 @@ $(document).ready(function(){
     $(this).toggleClass("is-active");
   });
 });
+
+// 네비게이션 클론
+const menu = document.querySelector(".menu")
+const nav_clone = menu.cloneNode(true)
+m_mobile.append(nav_clone)
+
+m_menu.addEventListener("click", () => {
+  if(m_menu.classList.contains("is-active")) {
+    m_mobile.style.opacity = 0;
+    m_mobile.style.visibility = "hidden";
+  } else {
+    m_mobile.style.opacity = 1;
+    m_mobile.style.visibility = "visible";
+  }
+})
+
+window.onresize = function(event){
+  let innerWidth = window.innerWidth;
+  if(innerWidth > 1012) {
+    m_mobile.style.display = "none"
+  } else {
+    m_mobile.style.display = "block"
+  }
+}

@@ -52,14 +52,15 @@ div[class ^= sec]:not(.sec01) h2 {
     width: 100%;
 }
 .nav .nav_wrap h1 {padding-left: 16px;}
-.nav .nav_wrap .menu {
+.nav .nav_wrap > .menu {
+    position: absolute;
     display: flex;
     justify-content: center;
     gap: 5rem;
     padding-right: 16px;
     width: 100%;
 }
-.nav .nav_wrap .menu a {
+.nav .nav_wrap > .menu a {
     position: relative;
     padding-bottom: 5px;
     color: #fff;
@@ -83,12 +84,43 @@ div[class ^= sec]:not(.sec01) h2 {
 .nav .nav_wrap .menu a.on::before {
     border-color: #000;
 }
-
 .nav h1 a {
     display: flex;
     width: 30px;
 }
 .nav h1 a img {width: 100%;}
+/* 네비게이션 모바일 */
+.nav .nav_wrap .m_mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: -100;
+}
+.nav .nav_wrap .m_mobile .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 0 16px;
+    height: 100vh;
+}
+.nav .nav_wrap .m_mobile .menu a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 40px;
+}
+.nav .nav_wrap .m_mobile .menu a::before {display: none;}
 /* 네비게이션 애니메이션 */
 .m-menu {
     display: none;
@@ -96,31 +128,27 @@ div[class ^= sec]:not(.sec01) h2 {
     cursor: pointer;
 }
 .line {
-	width: 50px;
-	height: 5px;
+	width: 30px;
+	height: 3px;
 	background-color: #ecf0f1;
 	display: block;
-	margin: 8px auto;
+	margin: 5px auto;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.m-menu.is-active .line:nth-child(2) {
-	opacity: 0;
-}
-
+.m-menu.is-active .line:nth-child(2) {opacity: 0;}
 .m-menu.is-active .line:nth-child(1) {
-	-webkit-transform: translateY(13px) rotate(45deg);
-	-ms-transform: translateY(13px) rotate(45deg);
-	-o-transform: translateY(13px) rotate(45deg);
-	transform: translateY(13px) rotate(45deg);
+	-webkit-transform: translateY(8px) rotate(45deg);
+	-ms-transform: translateY(8px) rotate(45deg);
+	-o-transform: translateY(8px) rotate(45deg);
+	transform: translateY(8px) rotate(45deg);
 }
-
 .m-menu.is-active .line:nth-child(3) {
-	-webkit-transform: translateY(-13px) rotate(-45deg);
-	-ms-transform: translateY(-13px) rotate(-45deg);
-	-o-transform: translateY(-13px) rotate(-45deg);
-	transform: translateY(-13px) rotate(-45deg);
+	-webkit-transform: translateY(-8px) rotate(-45deg);
+	-ms-transform: translateY(-8px) rotate(-45deg);
+	-o-transform: translateY(-8px) rotate(-45deg);
+	transform: translateY(-8px) rotate(-45deg);
 }
 /* ============ sec01 */
 .sec01 {
@@ -483,6 +511,10 @@ div[class ^= sec]:not(.sec01) h2 {
     /* navigation */
     .nav .nav_wrap .menu {display: none;}
     .m-menu {display: block;}
+    .m_mobile {display: block;}
+    /* ============ sec01 */
+    .sec01 .text .wave_tit {font-size: 3rem}
+    .sec01 .text p {font-size: 1rem;}
     /* ============ sec02 */
     .sec02 .prof_contents {
         flex-direction: column;
@@ -500,21 +532,27 @@ div[class ^= sec]:not(.sec01) h2 {
     }
 }
 @media screen and (max-width: 620px) {
-    .sec03 .project_list li .project_right {
-        flex-direction: column;
-    }
-    .sec03 .project_list li .project_right dl {
-        margin-bottom: 20px;
-    }
-}
-@media screen and (max-width: 620px) {
+    /* ============= sec01 */
+    .sec01 .text .wave_tit {font-size: 2rem}
+    .sec01 .text p {font-size: 0.875rem;}
+    /* ============= sec02 */
     .sec02 .prof_contents .right_prof .rgiht_bottom li .images {gap: 1rem;}
-    .sec02 .prof_contents .right_prof .rgiht_bottom li .images img {
-        max-width: 40px;
-    }
+    .sec02 .prof_contents .right_prof .rgiht_bottom li .images img {max-width: 40px;}
     .sec02 .prof_contents .right_prof .right_top .right_top_g {width: 100%;}
-    .sec02 .prof_contents .right_prof .right_top {
-        flex-direction: column;
+    .sec02 .prof_contents .right_prof .right_top {flex-direction: column;}
+    /* ============= sec03 */
+    .sec03 .project_list li .project_right {flex-direction: column;}
+    .sec03 .project_list li .project_right dt {font-size: 1rem;}
+    .sec03 .project_list li .project_right dt, .sec03 .project_list li .project_right dd {font-size: 0.875rem;}
+    .sec03 .project_list li .project_right dd.detail_page span {font-size: 0.75rem;}
+    .sec03 .project_list li .project_right dl {margin-bottom: 20px;}
+    .sec03 .project_list li h3 span:first-of-type {font-size: 1.125rem}
+    .sec03 .project_list li h3 strong {font-size: 1.25rem;}
+    .sec03 .project_list li h3 span:last-of-type {font-size: 0.875rem;}
+    /* ============= sec04 */
+    .sec04 .txt p > *:not(a),
+    .sec04 .txt p a {
+        font-size: 0.875rem;
     }
 }
 @media screen and (max-width: 352px) {
