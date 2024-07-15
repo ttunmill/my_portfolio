@@ -116,7 +116,7 @@ for(let i of ani) {
         trigger : i,
         // toggleActions: "resume pause reset pause",
         // markers: true,
-        start: "-30% center",
+        start: "top center",
         end:'bottom top',
         onEnter : () => {i.classList.add("up_ani")},
         // onEnterBack : () => {i.classList.add("up_ani")},
