@@ -60,9 +60,10 @@ div[class ^= sec]:not(.sec01) h2 {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    padding-right: 16px;
-    width: 100%;
-    z-index: -100;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* z-index: -100; */
 }
 .nav .nav_wrap > .menu a {
     position: relative;
