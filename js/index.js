@@ -115,7 +115,7 @@ for(let i of ani) {
     ScrollTrigger.create({
         trigger : i,
         // toggleActions: "resume pause reset pause",
-        markers: true,
+        // markers: true,
         start: "-30% center",
         end:'bottom top',
         onEnter : () => {i.classList.add("up_ani")},
