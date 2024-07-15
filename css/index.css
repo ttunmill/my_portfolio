@@ -66,6 +66,7 @@ div[class ^= sec]:not(.sec01) h2 {
 .nav .nav_wrap > .menu a {
     position: relative;
     padding-bottom: 5px;
+    font-weight: 500;
     color: #fff;
     text-transform: uppercase;
 }
