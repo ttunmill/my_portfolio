@@ -184,7 +184,7 @@ div[class ^= sec]:not(.sec01) h2 {
     text-align: center;
     font-size: 1.25rem;
     font-weight: 300;
-    animation: opacity 0.3s 1.5s linear both;
+    animation: opacity 0.3s 2.5s linear both;
 }
 .sec01 .text p em {font-weight: 700;}
 .sec01 .scroll_down {
