@@ -1,6 +1,7 @@
 /* ============ 공통 */
 body,html {scroll-behavior: smooth;}
 body::-webkit-scrollbar {display: none;}
+main {min-width: 320px;}
 /* main {background: rgb(245, 245, 245);} */
 /* body {position: relative;} */
 .wave1,
@@ -20,7 +21,7 @@ body::-webkit-scrollbar {display: none;}
 }
 .scroll_gauge {
     position: fixed;
-    bottom: 0;
+    top: 0;
     height: 5px;
     background-color: #FFD24C;
     z-index: 999;
@@ -49,7 +50,9 @@ div[class ^= sec]:not(.sec01) h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5px;
     width: 100%;
+    min-width: 320px;
 }
 .nav .nav_wrap h1 {padding-left: 16px;}
 .nav .nav_wrap > .menu {
@@ -226,10 +229,10 @@ div[class ^= sec]:not(.sec01) h2 {
     background-color: #ddd;
 }
 .sec02 .prof_contents .left_prof .image img {width: 100%;}
-/* .sec02 .prof_contents .left_prof p {font-size: 1.125rem;} */
+.sec02 .prof_contents .left_prof p {font-size: 1.125rem;}
 .sec02 .prof_contents .left_prof p span {
     font-weight: 300;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #333;
 }
 .sec02 .prof_contents .right_prof {
@@ -256,11 +259,15 @@ div[class ^= sec]:not(.sec01) h2 {
 .sec02 .prof_contents .right_prof .right_top .right_top_g h3, 
 .sec02 .prof_contents .right_prof .rgiht_bottom li h3 {
     position: relative;
-    z-index: 20;
     width: fit-content;
+    padding: 5px;
     font-size: 1.25rem;
     font-family: "Rubik", sans-serif;
+    background-color: #231F20;
+    z-index: 20;
 }
+.sec02 .prof_contents .right_prof .right_top .right_top_g ul {}
+.sec02 .prof_contents .right_prof .right_top .right_top_g ul li {padding-left: 10px;}
 /* .sec02 .prof_contents .right_prof .right_top .right_top_g h3::before, 
 .sec02 .prof_contents .right_prof .rgiht_bottom li h3::before {
     content: "";
@@ -285,18 +292,27 @@ div[class ^= sec]:not(.sec01) h2 {
     width: calc(100% / 2 - 1rem);
 }
 .sec02 .prof_contents .right_prof .right_top .right_top_g .date {
+    position: relative;
     margin-bottom: 5px;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5;
     color: #444;
+}
+.sec02 .prof_contents .right_prof .right_top .right_top_g .date::before {
+    content: "·";
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    display: inline-block;
+    font-size: 1.5rem;
 }
 .sec02 .prof_contents .right_prof .right_top .right_top_g .tit {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    font-size: 0.875rem;
-    line-height: 1.3;
+    /* font-size: 0.875rem; */
+    line-height: 2;
     color: #333;
 }
 .sec02 .prof_contents .right_prof .rgiht_bottom {}
@@ -344,7 +360,7 @@ div[class ^= sec]:not(.sec01) h2 {
     text-transform: uppercase;
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
-    color: #FFD24C;
+    /* color: #FFD24C; */
 }
 .sec03 .project_list li h3 span:last-of-type {
     color: #333;
@@ -353,14 +369,13 @@ div[class ^= sec]:not(.sec01) h2 {
     font-size: 1.875rem;
     box-shadow: inset 0 -10px 0 #ffe417;
 }
-.sec03 .project_list li:first-child .project_left,
-.sec03 .project_list li:nth-child(2) .project_left, 
-.sec03 .project_list li:nth-child(3) .project_left {
+.sec03 .project_list li:not(:last-child) .project_left{
     padding: 50px 0;
 }
 .sec03 .project_list li:first-child .project_left {background-color: #0a5e5a;}
 .sec03 .project_list li:nth-child(2) .project_left {background-color: #3399FF;}
 .sec03 .project_list li:nth-child(3) .project_left {background-color: #231F20;}
+.sec03 .project_list li:nth-child(4) .project_left {background-color: #C5002A;}
 .sec03 .project_list li .project_left .image {
     max-width: 600px;
     width: 80%;
@@ -376,20 +391,24 @@ div[class ^= sec]:not(.sec01) h2 {
 .sec03 .project_list li .project_right dl {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
+    flex: 2.75;
+    height: 100%;
 }
 .sec03 .project_list li .project_right dt,
 .sec03 .project_list li .project_right dd {
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
 }
 .sec03 .project_list li .project_right dt {
     width: 120px;
     font-size: 1.25rem;
     font-weight: 500;
-    align-self: flex-start;
+    /* align-self: flex-end; */
 }
 .sec03 .project_list li .project_right dd {
     width: calc(100% - 150px);
+    font-size: 1.125rem;
 }
 .sec03 .project_list li .project_right dd.detail_page {
     display: flex;
@@ -397,9 +416,10 @@ div[class ^= sec]:not(.sec01) h2 {
 }
 .sec03 .project_list li .project_right dd.detail_page span {
     margin-top: 10px;
-    font-size: 0.875rem;
+    /* font-size: 0.875rem; */
     color: #333;
 }
+.sec03 .project_list li .project_right dd.detail_page + dt span {}
 .sec03 .project_list li .project_right .btn_list {
     display: flex;
     flex-direction: column;
@@ -410,6 +430,7 @@ div[class ^= sec]:not(.sec01) h2 {
     display: block;
     text-align: center;
     padding: 10px 20px;
+    width: 170px;
     color: #fff;
     background-color: #222;
     border-radius: 30px;
@@ -536,23 +557,30 @@ div[class ^= sec]:not(.sec01) h2 {
     .sec01 .text .wave_tit {font-size: 2rem}
     .sec01 .text p {font-size: 0.875rem;}
     /* ============= sec02 */
+    .sec02 .prof_contents .left_prof p {font-size: 1rem;}
     .sec02 .prof_contents .right_prof .rgiht_bottom li .images {gap: 1rem;}
     .sec02 .prof_contents .right_prof .rgiht_bottom li .images img {max-width: 40px;}
     .sec02 .prof_contents .right_prof .right_top .right_top_g {width: 100%;}
     .sec02 .prof_contents .right_prof .right_top {flex-direction: column;}
+    .sec02 .prof_contents .right_prof .right_top .right_top_g .date {font-size: 1rem;}
+    .sec02 .prof_contents .right_prof .right_top .right_top_g .tit {font-size: 0.875rem;}
     /* ============= sec03 */
+    /* ============ sec03 */
+    .sec03 .project_list {gap: 5rem;}
     .sec03 .project_list li .project_right {flex-direction: column;}
+    .sec03 .project_list li .project_right .btn_list .link_btn {width: auto;}
     .sec03 .project_list li .project_right dt {font-size: 1rem;}
-    .sec03 .project_list li .project_right dt, .sec03 .project_list li .project_right dd {font-size: 0.875rem;}
-    .sec03 .project_list li .project_right dd.detail_page span {font-size: 0.75rem;}
+    .sec03 .project_list li .project_right dd {width: calc(100% - 120px);}
+    .sec03 .project_list li .project_right dt, .sec03 .project_list li .project_right dd {font-size: 1rem;}
+    .sec03 .project_list li .project_right dd.detail_page span {font-size: 0.875rem;}
     .sec03 .project_list li .project_right dl {margin-bottom: 20px;}
     .sec03 .project_list li h3 span:first-of-type {font-size: 1.125rem}
     .sec03 .project_list li h3 strong {font-size: 1.25rem;}
-    .sec03 .project_list li h3 span:last-of-type {font-size: 0.875rem;}
+    /* .sec03 .project_list li h3 span:last-of-type {font-size: 0.875rem;} */
     /* ============= sec04 */
     .sec04 .txt p > *:not(a),
     .sec04 .txt p a {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 352px) {
