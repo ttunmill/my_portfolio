@@ -62,6 +62,7 @@ div[class ^= sec]:not(.sec01) h2 {
     gap: 5rem;
     padding-right: 16px;
     width: 100%;
+    z-index: -100;
 }
 .nav .nav_wrap > .menu a {
     position: relative;

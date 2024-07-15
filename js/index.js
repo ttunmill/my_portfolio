@@ -115,11 +115,10 @@ for(let i of ani) {
     ScrollTrigger.create({
         trigger : i,
         // toggleActions: "resume pause reset pause",
-        // markers: true,
-        start: "top center",
+        markers: true,
+        start: "-30% center",
         end:'bottom top',
-        onEnter : () => {
-          i.classList.add("up_ani")},
+        onEnter : () => {i.classList.add("up_ani")},
         onEnterBack : () => {i.classList.add("up_ani")},
         onLeave: () => {i.classList.remove("up_ani");},
         onLeaveBack : () => {i.classList.remove("up_ani");},
