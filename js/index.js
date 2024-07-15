@@ -119,9 +119,9 @@ for(let i of ani) {
         start: "-30% center",
         end:'bottom top',
         onEnter : () => {i.classList.add("up_ani")},
-        onEnterBack : () => {i.classList.add("up_ani")},
-        onLeave: () => {i.classList.remove("up_ani");},
-        onLeaveBack : () => {i.classList.remove("up_ani");},
+        // onEnterBack : () => {i.classList.add("up_ani")},
+        // onLeave: () => {i.classList.remove("up_ani");},
+        // onLeaveBack : () => {i.classList.remove("up_ani");},
         scrub : true,
     })
 }
