@@ -502,7 +502,7 @@ div[class ^= sec]:not(.sec01) h2 {
     opacity: 0;
 }
 .up_ani {
-    animation: up_ani 0.6s ease both;
+    animation: up_ani 1s ease both;
 }
 /* ============ animation keyframes */
 @keyframes reveal {
