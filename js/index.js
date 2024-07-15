@@ -107,3 +107,22 @@ for(var i of nav_clone_a) {
     m_menu.classList.remove("is-active")
   }) 
 }
+
+// scrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+let ani = gsap.utils.toArray(".animation") 
+for(let i of ani) {
+    ScrollTrigger.create({
+        trigger : i,
+        // toggleActions: "resume pause reset pause",
+        // markers: true,
+        start: "top center",
+        end:'bottom top',
+        onEnter : () => {
+          i.classList.add("up_ani")},
+        onEnterBack : () => {i.classList.add("up_ani")},
+        onLeave: () => {i.classList.remove("up_ani");},
+        onLeaveBack : () => {i.classList.remove("up_ani");},
+        scrub : true,
+    })
+}
