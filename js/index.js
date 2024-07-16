@@ -56,6 +56,8 @@ window.addEventListener("scroll", () => {
         }
         for(var i of m_menu.children) {i.style.backgroundColor = "#000"}
         m_mobile.style.top = "60px"
+
+        // gaugeBar.style.backgroundColor = "#fff"
     } else {
         nav.style.position = "absolute"
         nav.style.backgroundColor = "unset"
@@ -66,6 +68,8 @@ window.addEventListener("scroll", () => {
         }
         for(var i of m_menu.children) {i.style.backgroundColor = "#ecf0f1"}
         m_mobile.style.top = 0
+        
+        // gaugeBar.style.backgroundColor = "#000"
     }
 })
 

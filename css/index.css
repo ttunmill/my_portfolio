@@ -24,6 +24,7 @@ main {min-width: 320px;}
     top: 0;
     height: 5px;
     background-color: #FFD24C;
+    /* background-color: #fff; */
     z-index: 999;
 }
 div[class ^= sec]:not(.sec01) {
