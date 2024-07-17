@@ -501,6 +501,13 @@ div[class ^= sec]:not(.sec01) h2 {
     transform-origin: bottom left;
     transform: scaleX(1);
 }
+.sec04 .txt p:nth-child(2) {
+    margin: 0 auto 50px;
+    width: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sec04 .txt p img {width: 100%;}
 /* ============ animation*/
 .animation {
     opacity: 0;
